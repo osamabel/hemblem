@@ -1,4 +1,39 @@
-.gradient-top {
+
+.App {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 80px;
+}
+
+#header::before {
+  content: "";
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+#header.minified::before {
+  opacity: 1;
+}
+
+.background-gradient-top {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -9,11 +44,16 @@
 }
 
 .background-gradient-bottom {
-  position: absolute;
-  z-index: 1;
-  top: 450px;
-  left: 50%;
-  margin-left: -1020px;
-  width: 2040px;
-  height: 450px;
+    position: absolute;
+    z-index: 1;
+    top: 450px;
+    left: 50%;
+    margin-left: -1020px;
+    width: 2040px;
+    height: 450px;
+}
+
+
+.container {
+  @apply max-w-[90%] lg:max-w-[86%] lg:w-[964px] xl:w-[1180px] 2xl:max-w-[80%];
 }
