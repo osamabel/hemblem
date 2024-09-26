@@ -19,12 +19,13 @@ function Header() {
       };
     }, []);
   return (
-    <div id="header" className={`${isMinified ? 'minified' : ''} h-[70px] flex justify-center items-center`}>
+    <div id="header" className={`${isMinified ? 'minified' : ''} h-[70px] flex justify-center items-center z-[40]`}>
     <div className="container">
       <div className="flex items-center justify-between">
         <div className="left">
           <a href="/fr" className="logo-link" title="Hemblem">
-            <img src="https://hemblem.app/assets/img/hemblem-app-logo.svg" alt="Logo d'Hemblem" />
+            <img className='w-[50px]' src="./colibri.svg" alt="colibri" />
+            {/* <img src="https://hemblem.app/assets/img/hemblem-app-logo.svg" alt="Logo d'Hemblem" /> */}
           </a>
         </div>
 

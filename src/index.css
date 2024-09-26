@@ -5,16 +5,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@keyframes toLeft {
+  0% {
+    transform: translateX(10%); /* Start off-screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* End at the normal position */
+    opacity: 1;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+  .animate-toLeft {
+    animation: toLeft .81s ease-in-out forwards;
+  }
 }
+
+@keyframes toRight {
+  0% {
+    transform: translateX(-10%); /* Start off-screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* End at the normal position */
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-toRight {
+    animation: toRight .81s ease-in-out forwards;
+  }
+}
+
+
+@keyframes toTop {
+  0% {
+    transform: translateY(20%); /* Start off-screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at the normal position */
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-toTop {
+    animation: toTop .81s ease-in-out forwards;
+  }
+}
+
+@keyframes toBtm {
+  0% {
+    transform: translateY(-20%); /* Start off-screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at the normal position */
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-toBtm {
+    animation: toBtm .81s ease-in-out forwards;
+  }
+}
+
+/* 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* 3D card effect */
+/* .group:hover .influencer-card {
+  transform: rotateY(20deg) rotateX(10deg);
+}
+
+.group:hover img {
+  transform: scale(1.05);
+} */
